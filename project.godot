@@ -1,0 +1,86 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Arma_a_Distancia",
+"language": "GDScript",
+"path": "res://Scripts/ArmaDistancia.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Enemic",
+"language": "GDScript",
+"path": "res://Scripts/Enemic.gd"
+}, {
+"base": "Area2D",
+"class": "Fletxa",
+"language": "GDScript",
+"path": "res://Scripts/Fletxa.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Personatge",
+"language": "GDScript",
+"path": "res://Scripts/Titellot.gd"
+} ]
+_global_script_class_icons={
+"Arma_a_Distancia": "",
+"Enemic": "",
+"Fletxa": "",
+"Personatge": ""
+}
+
+[application]
+
+config/name="DeividJuego"
+run/main_scene="res://Escenes/Joc.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+global="*res://global.gd"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+move_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":87,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":83,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
+}
+atac={
+"deadzone": 0.5,
+"events": [  ]
+}
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
